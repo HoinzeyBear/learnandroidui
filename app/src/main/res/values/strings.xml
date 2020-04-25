@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LearnAndroidUI</string>
+    <string name="minus">Minus</string>
+    <string name="plus">Plus</string>
 </resources>
