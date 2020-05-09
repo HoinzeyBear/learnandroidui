@@ -2,4 +2,13 @@
     <string name="app_name">LearnAndroidUI</string>
     <string name="minus">Minus</string>
     <string name="plus">Plus</string>
+    <string name="to_kotlin_cc">To Kotlin Custom Components</string>
+    <string name="swatch">Swatch</string>
+
+    <string-array name="color_array">
+        <item>#E33E24</item>
+        <item>#1DBC8E</item>
+        <item>#E891AF</item>
+        <item>#30BA2B</item>
+    </string-array>
 </resources>

@@ -1,68 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".MainActivity">-->
-
-<!--    <com.example.learnandroidui.customcomponents.VersionView-->
-<!--        android:id="@+id/version_view"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--<com.example.learnandroidui.customcomponents.LengthPicker-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android" />-->
-
-<!--<com.example.learnandroidui.customcomponents.PhotoSpiral-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_gravity="center">-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/petronas_twin_tower" />-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/himeji" />-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/ulm" />-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/chiang_mai" />-->
-<!--</com.example.learnandroidui.customcomponents.PhotoSpiral>-->
-
-    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:gravity="center">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/kotlincc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#3F51B5"
+        android:text="@string/to_kotlin_cc"
+        android:textColor="#FF5722"
+        android:onClick="toKotlinCustomComponents"/>
+
+    <com.example.learnandroidui.customcomponents.VersionView
+        android:id="@+id/version_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.learnandroidui.customcomponents.LengthPicker xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.learnandroidui.customcomponents.PhotoSpiral xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/petronas_twin_tower" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/himeji" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ulm" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chiang_mai" />
+    </com.example.learnandroidui.customcomponents.PhotoSpiral>
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:gravity="center">
 
 
-    <com.example.learnandroidui.customcomponents.Pizza
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_margin="7dp"
-        app:num_wedges="6"
-        app:stroke_width="8dp"
-        app:color="#AA4"/>
+        <com.example.learnandroidui.customcomponents.Pizza
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="7dp"
+            app:num_wedges="6"
+            app:stroke_width="8dp"
+            app:color="#AA4"/>
+
+    </LinearLayout>
 
 </LinearLayout>
