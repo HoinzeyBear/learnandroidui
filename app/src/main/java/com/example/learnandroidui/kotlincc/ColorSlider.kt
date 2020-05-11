@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.widget.SeekBar
 import androidx.core.content.ContextCompat
 import com.example.learnandroidui.R
@@ -28,7 +29,7 @@ class ColorSlider @JvmOverloads constructor(context: Context,
         splitTrack = false
         max = listOfColors.size-1
         thumb = context.getDrawable(R.drawable.ic_arrow_drop_down_black_24dp)
-        setPadding(paddingLeft,paddingTop, paddingRight,paddingBottom + 50)
+        setPadding(paddingLeft,paddingTop, paddingRight,paddingBottom + getPixelValueFromDP(16f).toInt())
         progressTintList = ContextCompat.getColorStateList(context, android.R.color.transparent)
         progressBackgroundTintList = ContextCompat.getColorStateList(context, android.R.color.transparent)
 
@@ -70,11 +71,11 @@ class ColorSlider @JvmOverloads constructor(context: Context,
         canvas?.let {
             val colorCount = listOfColors.size
             val saveCount = canvas.save()
-            canvas.translate(paddingLeft.toFloat(), (height/2).toFloat()+50f)
+            canvas.translate(paddingLeft.toFloat(), (height/2).toFloat()+getPixelValueFromDP(16f).toInt())
             if(colorCount > 1) {
                 for(i in 0 until colorCount) {
-                    val w = 48f
-                    val h = 48f
+                    val w = getPixelValueFromDP(16f)
+                    val h = getPixelValueFromDP(16f)
                     val halfW = w/2
                     val halfH = h/2
 
@@ -106,6 +107,11 @@ class ColorSlider @JvmOverloads constructor(context: Context,
                 canvas.restoreToCount(saveCount)
             }
         }
+    }
 
+    private fun getPixelValueFromDP(value: Float): Float {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                value,
+                context.resources.displayMetrics)
     }
 }
