@@ -19,5 +19,9 @@ class KotlinCCActivity : AppCompatActivity() {
         colorslider.addListener { color ->
             swatch_button.setBackgroundColor(color)
         }
+
+        colordial.addListener {
+            swatch_button.setBackgroundColor(it)
+        }
     }
 }
