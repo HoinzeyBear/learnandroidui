@@ -11,4 +11,9 @@
         <item>#E891AF</item>
         <item>#30BA2B</item>
     </string-array>
+
+    <string name="rotate">Rotate</string>
+    <string name="scale">Scale</string>
+    <string name="translate">Translate</string>
+    <string name="fade">Fade</string>
 </resources>
